@@ -18,4 +18,4 @@ y = [2, 4, 6, 8, 10];
 
 The code will output the estimated parameter values a and the residual error values error.
 
-[https://github.com/AniketKumarC007/NonLinear-Regression/blob/main/graph.png]
+<img src="https://github.com/AniketKumarC007/NonLinear-Regression/blob/main/graph.png" width="1000"> <br>
