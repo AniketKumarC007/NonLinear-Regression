@@ -1,12 +1,18 @@
 # NonLinear-Regression
-Gauss-Newton non-linear regression is an optimization algorithm used to fit non-linear models to data. It is a variant of the more general Levenberg-Marquardt algorithm, which combines the steepest descent and Gauss-Newton methods for finding the minimum of a sum of squared errors.
+##Gauss-Newton Non-Linear Regression
+This project implements the Gauss-Newton algorithm for non-linear regression in MATLAB. The code uses a generic implementation of the algorithm to fit non-linear models to data.
 
-The Gauss-Newton algorithm is particularly well-suited for non-linear least squares problems, where the objective is to minimize the sum of squared differences between the predicted model values and the observed data. The algorithm works by iteratively approximating the non-linear model as a linear function and solving for the model parameters that minimize the residual errors.
+##Getting Started
+To use this code, you will need to have MATLAB installed on your machine. Once you have MATLAB installed, you can download or clone this repository to your local machine.
 
-To use the Gauss-Newton algorithm for non-linear regression, you typically start by defining a non-linear model that you want to fit to your data. This model could be any function that has one or more unknown parameters that need to be estimated from the data.
+##Usage
+To use the code, you will need to modify the jac function to implement the specific non-linear model you want to fit to your data. The function takes two input vectors x and y, which represent the independent and dependent variables in your data, respectively.
 
-You then initialize the parameters to some initial guess values and run the Gauss-Newton algorithm to iteratively refine the parameter estimates. At each iteration, the algorithm approximates the non-linear model as a linear function using the current parameter estimates and computes the new estimates by solving a linear least squares problem.
+##To run the code, simply call the jac function with your input data vectors as arguments, like this:
 
-The Gauss-Newton algorithm can be very efficient for certain types of non-linear regression problems, but it can also be sensitive to the initial parameter estimates and may converge to local minima. Therefore, it is important to carefully choose the initial parameter values and to perform multiple runs with different initial values to ensure that you find the best possible solution.
+x = [1, 2, 3, 4, 5];
+y = [2, 4, 6, 8, 10];
+[a, error] = jac(x, y);
 
- 
+The code will output the estimated parameter values a and the residual error values error.
+
